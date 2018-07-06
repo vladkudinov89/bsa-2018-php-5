@@ -6,6 +6,7 @@ interface CurrencyRepositoryInterface
 {
     // todo implement methods
 
+
     /**
      * @param Currency[]
      */
@@ -15,4 +16,5 @@ interface CurrencyRepositoryInterface
      * @return Currency[]
      */
     public function findAll(): array;
+    
 }
