@@ -16,13 +16,13 @@ class GetPopularCurrenciesCommandHandler
     public function handle(int $count = self::POPULAR_COUNT): array
     {
         // todo implement
-//        $arrSearch = $this->repository->findAll();
-//        return $arrSearch->map(function ($item){
-//            return $item->getPrice();
-//        })
-//            ->sortByDesc(function ($item){
-//                return $item->getPrice();
-//            })->take($count)->values()->get();
+        $arrSearch = $this->repository->findAll();
+        return $arrSearch->map(function ($item){
+            return $item->getPrice();
+        })
+            ->sortByDesc(function ($item){
+                return $item->getPrice();
+            })->take($count)->values()->get();
 
 
 
