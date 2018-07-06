@@ -56,7 +56,7 @@ class Task1Test extends TestCase
         $repository = $this->createRepositoryMock();
 
         $command = new GetCurrenciesCommandHandler($repository);
-
+//        dd($command);
         $data = $command->handle();
 
         $this->assertNotEmpty($data);

@@ -13,7 +13,7 @@ class GetCurrenciesCommandHandler
     public function handle(): array
     {
         // todo implement
-        $this->repository->findAll();
+        return $this->repository->findAll();
 
     }
 }
