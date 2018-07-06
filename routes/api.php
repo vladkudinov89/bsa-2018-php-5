@@ -19,5 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group([ 'prefix' => 'currencies' ] , function (){
     Route::get('/','CurrencyController@index');
+    Route::get('/unstable','CurrencyController@unstable');
 });
 
