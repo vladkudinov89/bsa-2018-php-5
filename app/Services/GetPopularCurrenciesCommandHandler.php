@@ -9,7 +9,7 @@ class GetPopularCurrenciesCommandHandler
     use ArraySort;
     
     const POPULAR_COUNT = 3;
-    public $repository;
+    private $repository;
 
     public function __construct(CurrencyRepositoryInterface $repository)
     {
@@ -21,7 +21,7 @@ class GetPopularCurrenciesCommandHandler
         // todo implement
         $currencies = $this->repository->findAll();
 
-        return array_slice(self::crypt_sort($currencies, 'price' ,SORT_ASC), 0, $count);
+        return array_slice(self::crypt_sort($currencies, 'price' ,SORT_DESC), 0, $count);
 
     }
 }
