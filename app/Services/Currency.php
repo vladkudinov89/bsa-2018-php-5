@@ -4,11 +4,11 @@ namespace App\Services;
 
 class Currency
 {
-    private $id;
-    private $name;
-    private $price;
-    private $imageURL;
-    private $dailyChangePer;
+    public $id;
+    public $name;
+    public $price;
+    public $imageURL;
+    public $dailyChangePer;
 
     public function __construct(int $id, string $name, float $price, string $imageURL, float $dailyChangePer)
     {
