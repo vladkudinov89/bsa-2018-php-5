@@ -21,7 +21,7 @@ class PopularController extends Controller
         $popArray = app(GetPopularCurrenciesCommandHandler::class);
         
         return view('popular_currencies' , [
-            'popArray' => $popArray->handle()
+            'popArray' => $popArray->handleView()
         ]);
 
     }
